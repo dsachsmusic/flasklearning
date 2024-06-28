@@ -18,7 +18,7 @@ cors = CORS(app)#, resources={r"/submit-form": {"origins": "http://localhost:500
 #    message = db.Column(db.Text, nullable=False)
 
 @app.route("/")
-def index():
+def index():    
     return app.send_static_file("index.html")
 
 # Add more routes for your Flask backend APIs here...
@@ -37,4 +37,4 @@ def submit_form():
 
 if __name__ == "__main__":
     #db.create_all()
-    app.run(debug=True)
+    app.run(host='10.0.0.4', port=8080, debug=True)
