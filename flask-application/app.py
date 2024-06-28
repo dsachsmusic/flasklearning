@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 app = Flask(__name__, static_folder="./react-frontend", static_url_path="/")
 
-cors = CORS(app)#, resources={r"/submit-form": {"origins": "http://localhost:5000"}},
+cors = CORS(app)#, resources={r"/submit-form": {"origins": "http://localhost:8080"}},
             #methods=["POST"])
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
