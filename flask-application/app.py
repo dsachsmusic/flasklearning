@@ -37,4 +37,5 @@ def submit_form():
 
 if __name__ == "__main__":
     #db.create_all()
-    app.run(host='10.0.0.4', port=8080, debug=True)
+    #Note: host= 0.0.0.0 for container...but can specifiy specific interface IP (10.0.0.4) if using ec2
+    app.run(host='0.0.0.0', port=8080, debug=True) 
